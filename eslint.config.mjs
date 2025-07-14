@@ -10,6 +10,7 @@ export default antfu({
   formatters: true,
 }, {
   rules: {
+    'node/prefer-global/process': ['off'],
     'object-curly-newline': ['warn', {
       multiline: true,
       minProperties: 3,
