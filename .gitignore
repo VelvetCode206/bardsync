@@ -141,3 +141,8 @@ dist
 # NX
 .nx/cache
 .nx/workspace-data
+
+# Nuxt dev/build outputs
+.output
+.data
+.nitro
