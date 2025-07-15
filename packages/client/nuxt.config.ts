@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
-  modules: ['@nuxt/eslint'],
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts'],
   eslint: { config: { standalone: false } },
+  tailwindcss: {},
+  fonts: { defaults: { weights: [400, 500, 600, 700], styles: ['normal', 'italic'] } },
 })
