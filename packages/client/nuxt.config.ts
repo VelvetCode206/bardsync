@@ -7,8 +7,40 @@ export default defineNuxtConfig({
   srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
   eslint: { config: { standalone: false } },
   tailwindcss: {},
-  fonts: { defaults: { weights: [400, 500, 600, 700], styles: ['normal', 'italic'] } },
+  fonts: {
+    defaults: {
+      weights: [400, 500, 600, 700],
+      styles: ['normal', 'italic'],
+    },
+  },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: 'src/assets/icons',
+      },
+    ],
+  },
+  image: {
+    quality: 80,
+    format: ['webp'],
+    screens: {
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      '2xl': 1536,
+    },
+    presets: {
+      avatar: {
+        modifiers: {
+          width: 64,
+          height: 64,
+        },
+      },
+    },
+  },
 })
