@@ -6,4 +6,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
+  modules: ['@nuxt/eslint'],
+  eslint: { config: { standalone: false } },
 })
