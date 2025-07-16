@@ -3,7 +3,7 @@ const { setLocale } = useI18n()
 </script>
 
 <template>
-  <div class="absolute left-5 top-48 flex flex-col items-start gap-2 text-white">
+  <div class="absolute left-5 top-48 flex flex-col items-start gap-2">
     <p class="uppercase font-medium text-2xl">
       {{ $t('pages.home.title') }}
     </p>
