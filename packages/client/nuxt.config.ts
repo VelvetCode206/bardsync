@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@vueuse/nuxt'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
   eslint: { config: { standalone: false } },
   tailwindcss: {},
   fonts: {
@@ -44,4 +44,5 @@ export default defineNuxtConfig({
     },
   },
   vueuse: {},
+  pinia: { storesDirs: ['src/stores/**'] },
 })
