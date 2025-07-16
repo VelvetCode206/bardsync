@@ -4,5 +4,6 @@
     <NuxtWelcome />
     <BaseIcons />
     <BaseImages />
+    <BaseComposables />
   </div>
 </template>
