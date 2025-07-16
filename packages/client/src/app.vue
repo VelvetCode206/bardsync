@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const head = useLocaleHead()
 const alertsStore = useAlertsStore()
 
 onMounted(() => {
@@ -11,11 +12,13 @@ onMounted(() => {
 
 <template>
   <div>
+    <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir" />
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
     <BaseIcons />
     <BaseImages />
     <BaseComposables />
     <AlertsList />
+    <BaseLocalization />
   </div>
 </template>

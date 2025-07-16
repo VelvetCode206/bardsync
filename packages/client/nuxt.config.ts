@@ -7,7 +7,16 @@ export default defineNuxtConfig({
   srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@nuxtjs/i18n',
+  ],
   eslint: { config: { standalone: false } },
   tailwindcss: {},
   fonts: {
@@ -45,4 +54,31 @@ export default defineNuxtConfig({
   },
   vueuse: {},
   pinia: { storesDirs: ['src/stores/**'] },
+  i18n: {
+    locales: [
+      {
+        name: 'English',
+        code: 'en',
+        language: 'en-US',
+        file: 'en.yaml',
+      },
+      {
+        name: 'Português',
+        code: 'pt',
+        language: 'pt-BR',
+        file: 'pt.yaml',
+      },
+    ],
+    defaultLocale: 'en',
+    restructureDir: false,
+    langDir: 'locales',
+    lazy: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    baseUrl: process.env.BASE_URL,
+    bundle: { optimizeTranslationDirective: false },
+  },
 })
