@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  srcDir: 'src',
   typescript: { tsConfig: { extends: resolve(dirname(fileURLToPath(import.meta.url)), '../../tsconfig.base.json') } },
   css: ['~/assets/css/main.css'],
   modules: [
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: 'custom',
-        dir: 'src/assets/icons',
+        dir: './app/assets/icons',
       },
     ],
   },
@@ -53,7 +52,7 @@ export default defineNuxtConfig({
     },
   },
   vueuse: {},
-  pinia: { storesDirs: ['src/stores/**'] },
+  pinia: { storesDirs: ['./app/stores/**'] },
   i18n: {
     locales: [
       {

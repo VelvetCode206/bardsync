@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ALERT_DELAY_MS, STORE_ID_ALERTS } from '~/utils/constants'
+import { ALERT_DELAY_MS, STORE_ID_ALERTS } from '~~/shared/constants'
 
 export interface Alert {
   id: number
