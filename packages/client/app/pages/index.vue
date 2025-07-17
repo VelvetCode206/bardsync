@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <BaseIcons />
+  <div class="flex flex-col">
+    <!-- <BaseIcons />
     <BaseImages />
     <BaseComposables />
     <BaseAlertsList />
-    <BaseLocalization />
+    <BaseLocalization /> -->
   </div>
 </template>

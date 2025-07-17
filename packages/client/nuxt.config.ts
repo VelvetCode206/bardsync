@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
+    '@nuxtjs/color-mode',
   ],
   eslint: { config: { standalone: false } },
   tailwindcss: {},
@@ -98,5 +99,10 @@ export default defineNuxtConfig({
     },
     baseUrl: process.env.BASE_URL,
     bundle: { optimizeTranslationDirective: false },
+  },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    storage: 'cookie',
   },
 })

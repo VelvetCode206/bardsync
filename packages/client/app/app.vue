@@ -11,8 +11,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir" />
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir" />
+  <div class="flex flex-col h-dvh">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

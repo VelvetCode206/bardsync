@@ -1,0 +1,11 @@
+body {
+  @apply bg-light-bg text-light-text transition-colors duration-300 ease-in-out;
+}
+
+.dark-mode body {
+  @apply bg-dark-bg text-dark-text;
+}
+
+.retro-mode body {
+  @apply bg-retro-bg text-retro-text;
+}
