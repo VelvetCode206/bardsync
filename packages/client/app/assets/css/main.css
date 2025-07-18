@@ -1,11 +1,32 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@custom-variant retro (&:where([data-theme=retro], [data-theme=retro] *));
+
+@theme {
+  --font-sans: Poppins, sans-serif;
+  --color-text-primary: #111111;
+  --color-bg-primary: #eeeeee;
+}
+
+@layer base {
+  [data-theme='dark'] {
+    --color-text-primary: #eeeeee;
+    --color-bg-primary: #111111;
+  }
+
+  [data-theme='retro'] {
+    --color-text-primary: #007096;
+    --color-bg-primary: #fbd0a6;
+  }
+}
+
+html * {
+  color: var(--color-text-primary);
+  @apply transition-colors duration-300 ease-in-out;
+}
+
 body {
-  @apply bg-light-bg text-light-text transition-colors duration-300 ease-in-out;
-}
-
-.dark-mode body {
-  @apply bg-dark-bg text-dark-text;
-}
-
-.retro-mode body {
-  @apply bg-retro-bg text-retro-text;
+  background-color: var(--color-bg-primary);
 }

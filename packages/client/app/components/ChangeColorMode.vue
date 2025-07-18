@@ -56,9 +56,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex gap-4 text-3xl">
+  <div class="flex items-center gap-4">
+    <p>{{ $t('general.color-theme') }}</p>
     <button
       v-for="option in colorModeOptions" :key="option.name"
+      type="button"
+      class="text-3xl leading-0 cursor-pointer"
       :class="{ 'opacity-50': !option.selected }" @click.prevent="setColorModePreference(option.name)"
     >
       <Icon :name="option.icon" />

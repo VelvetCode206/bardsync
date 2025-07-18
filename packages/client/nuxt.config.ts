@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1',
+          content: 'width=device-width, initial-scale=1.0',
         },
         { name: 'description', content: 'This is a template Nuxt application' },
       ],
@@ -104,5 +104,6 @@ export default defineNuxtConfig({
     preference: 'system',
     fallback: 'light',
     storage: 'cookie',
+    dataValue: 'theme',
   },
 })

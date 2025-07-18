@@ -1,4 +1,6 @@
 general:
+  app-name: Nuxt App
+  color-theme: 'Color theme:'
   language: Language
 pages:
   home:
